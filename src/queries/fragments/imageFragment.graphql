@@ -1,0 +1,11 @@
+fragment ImageAttributes on Image {
+  id
+  description
+  height
+  width
+  url {
+    raw
+    small
+    thumb
+  }
+}

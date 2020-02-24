@@ -1,0 +1,51 @@
+#import './fragments/imageFragment.graphql'
+#import './fragments/authorFragment.graphql'
+
+query Images($search: String, $page: Int, $perPage: Int, $source: String) {
+  images(search: $search, page: $page, perPage: $perPage, source: $source) {
+    data {
+      totalLikes
+      likes
+      sourceLikes
+      ...ImageAttributes
+      author {
+        ...AuthorAttributes
+      }
+    }
+  }
+}
+
+query Image($id: ID!) {
+  image(id: $id) {
+    ...ImageAttributes
+    author {
+      ...AuthorAttributes
+    }
+  }
+}
+
+mutation CreateImage($data: Image_Attributes!) {
+  createImage(data: $data) {
+    ...ImageAttributes
+  }
+}
+
+mutation UpdateImage($id: ID!, $data: Image_Attributes!) {
+  updateImage(id: $id, data: $data) {
+    ...ImageAttributes
+  }
+}
+
+mutation LikeImage($id: ID!) {
+  likeImage(id: $id) {
+    ...ImageAttributes
+    likes
+  } 
+}
+
+mutation UnlikeImage($id: ID!) {
+  unlikeImage(id: $id) {
+    id
+    likes
+  } 
+}

@@ -1,0 +1,39 @@
+/*!
+Copyright 2015-present Palantir Technologies, Inc. All rights reserved.
+Licensed under the Apache License, Version 2.0.
+*/
+
+// Overwrite variables
+
+@import "~styles/variables";
+
+$pt-font-size: $font-size;
+$pt-font-size-small: $font-size-small;
+$pt-font-size-large: $font-size-large;
+$pt-navbar-height: $navbar-height;
+$pt-grid-size: $grid-size;
+
+// Import files in the same order that they are documented in the docs
+
+@import "~@blueprintjs/core/src/common/variables";
+@import "~@blueprintjs/core/src/common/colors";
+
+@import "~@blueprintjs/core/src/reset";
+@import "~@blueprintjs/core/src/typography";
+@import "~@blueprintjs/core/src/accessibility/focus-states";
+
+@import "~@blueprintjs/core/src/components/index";
+
+// Overwrite components
+
+@import "./components/button/button";
+@import "./components/card/card";
+@import "./components/divider/divider";
+@import "./components/navbar/navbar";
+
+// Import icons
+
+$icon-font-path: "~@blueprintjs/icons/resources/icons";
+
+@import "~@blueprintjs/icons/src/font-imports";
+@import "~@blueprintjs/icons/src/icons";

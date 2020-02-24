@@ -1,0 +1,115 @@
+@import "~styles/variables";
+@import "~styles/colors";
+
+$imageCardHorizontalPadding: $grid-size * 1.5;
+$imageCardVerticalPadding: $grid-size;
+$imageCardExpandIconSize: $grid-size * 4;
+
+.imageCard {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  
+  .header {
+    flex: 0 0 auto;
+    display: flex;
+    padding: $imageCardVerticalPadding 0;
+
+    .content {
+      flex: 1 1 auto;
+      overflow: hidden;
+      cursor: pointer;
+
+      p {
+        width: 100%;
+        margin-bottom: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .actions {
+      flex: 0 0 auto;
+    }
+  }
+
+  .image {
+    flex: 0 0 350px;
+    display: block;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .highlight {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: transparent;
+      transition: all 200ms;
+      overflow: hidden;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        top: $imageCardHorizontalPadding - ($imageCardExpandIconSize * 1.5 / 2);
+        left: $imageCardHorizontalPadding - ($imageCardExpandIconSize * 1.5 / 2);
+        width: $imageCardExpandIconSize * 1.5;
+        height: $imageCardExpandIconSize * 1.5;
+        opacity: 0;
+        background-color: $dark;
+        padding: $grid-size / 2;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 250ms;
+
+        svg {
+          position: relative;
+          display: block;
+          color: $white;
+          width: $grid-size * 3;
+          height: $grid-size * 3;
+          opacity: 0;
+          transition: all 250ms;
+        }
+      }
+    }
+
+    &:hover {
+      .highlight {
+        background-color: mix($white, transparent, 30);
+
+        .icon {
+          top: $imageCardHorizontalPadding;
+          left: $imageCardHorizontalPadding;
+          height: $imageCardExpandIconSize;
+          width: $imageCardExpandIconSize;
+          opacity: 1;
+
+          svg {
+            width: $grid-size * 1.5;
+            height: $grid-size * 1.5;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+ 
+  .footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50px;
+    background-color: mix($white, transparent, 30);
+    .like {
+      padding-right: 10px;
+    }  
+  }
+}

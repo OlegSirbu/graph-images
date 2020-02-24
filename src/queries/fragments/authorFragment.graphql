@@ -1,0 +1,4 @@
+fragment AuthorAttributes on Author {
+  id
+  username
+}

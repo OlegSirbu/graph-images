@@ -1,0 +1,23 @@
+.bp3-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .bp3-navbar-group {
+    flex: 1 1 33.3%;
+    justify-content: center;
+    align-items: center;
+
+    &.bp3-align-left {
+      justify-content: flex-start;
+    }
+
+    &.bp3-align-right {
+      justify-content: flex-end;
+    }
+  }
+
+  .bp3-navbar-divider {
+    margin: 0 $pt-grid-size * 2;
+  }
+}

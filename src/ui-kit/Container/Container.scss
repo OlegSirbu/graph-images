@@ -1,0 +1,6 @@
+@import "~styles/variables";
+
+.container {
+  margin: $grid-size * 4 auto;
+  max-width: $layout-width;
+}

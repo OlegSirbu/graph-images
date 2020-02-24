@@ -1,0 +1,15 @@
+@import "~styles/variables";
+
+.spacer {
+  &.horizontal {
+    display: inline-block;
+    width: $grid-size;
+    height: 1px;
+  }
+
+  &.vertical {
+    display: block;
+    width: 100%;
+    height: $grid-size;
+  }
+}

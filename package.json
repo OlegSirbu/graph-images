@@ -1,0 +1,64 @@
+{
+  "name": "challenges-solutions",
+  "version": "1.0.0",
+  "description": "App for testing react/redux/apollo skills",
+  "main": "index.js",
+  "engines": {
+    "node": ">=13.3.0",
+    "yarn": ">=1.19.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode development --config config/webpack.config.js --progress --hot",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medspoke/challenges-solutions.git"
+  },
+  "author": "Medspoke dev team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/medspoke/challenges-solutions/issues"
+  },
+  "homepage": "https://github.com/medspoke/challenges-solutions#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "@apollo/react-hooks": "^3.1.3",
+    "@blueprintjs/core": "^3.22.2",
+    "@blueprintjs/icons": "^3.13.0",
+    "apollo-boost": "^0.4.4",
+    "classnames": "^2.2.6",
+    "file-loader": "^5.0.2",
+    "formik": "^2.0.8",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "history": "^4.10.1",
+    "lodash": "^4.17.15",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "query-string": "^6.9.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "react-waypoint": "^9.0.2",
+    "redux": "^4.0.4"
+  }
+}

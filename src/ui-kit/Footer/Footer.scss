@@ -1,0 +1,10 @@
+@import "~styles/colors";
+@import "~styles/variables";
+
+.footer {
+  background-color: $dark;
+  display: flex;
+  min-height: $grid-size * 6;
+  align-items: center;
+  justify-content: center;
+}
